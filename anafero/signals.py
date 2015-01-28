@@ -1,4 +1,4 @@
-import django.dispatch
+from django.dispatch import Signal
 
 
-user_linked_to_response = django.dispatch.Signal(providing_args=["response"])
+user_linked_to_response = Signal(providing_args=["response"])
