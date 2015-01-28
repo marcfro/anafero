@@ -22,7 +22,7 @@ class Referral(models.Model):
         related_name="referral_codes",
         null=True
     )
-    label = models.CharField(max_length=100, blank=True)
+    label = models.CharField(max_length=100, blank=True, null=True)
     code = models.CharField(max_length=40, unique=True)
     expired_at = models.DateTimeField(null=True)
     redirect_to = models.CharField(max_length=512)
